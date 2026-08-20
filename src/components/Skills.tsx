@@ -1,5 +1,4 @@
 import Reveal from "./Reveal";
-import TiltCard from "./TiltCard";
 import { skillGroups } from "@/lib/data";
 
 export default function Skills() {
@@ -18,10 +17,7 @@ export default function Skills() {
         <div className="mt-14 grid gap-8 md:grid-cols-3">
           {skillGroups.map((group, i) => (
             <Reveal key={group.label} delay={i * 0.1}>
-              <TiltCard
-                maxTilt={6}
-                className="h-full rounded-2xl border border-white/60 bg-white/50 p-7 backdrop-blur-xl"
-              >
+              <div className="h-full rounded-2xl border border-white/60 bg-white/50 p-7 backdrop-blur-xl">
                 <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
                   {group.label}
                 </h3>
@@ -35,7 +31,7 @@ export default function Skills() {
                     </span>
                   ))}
                 </div>
-              </TiltCard>
+              </div>
             </Reveal>
           ))}
         </div>

@@ -5,7 +5,6 @@ import { motion, useScroll, useTransform, type MotionValue } from "framer-motion
 import { ArrowUpRight } from "lucide-react";
 import FloatingShapes from "./FloatingShapes";
 import Reveal from "./Reveal";
-import TiltCard from "./TiltCard";
 import { projects, type ProjectItem } from "@/lib/data";
 
 function ProjectCard({
@@ -29,10 +28,7 @@ function ProjectCard({
       className="sticky flex h-screen items-center justify-center px-6 md:px-10"
     >
       <motion.div style={{ scale }} className="w-full max-w-3xl origin-top">
-        <TiltCard
-          maxTilt={7}
-          className="rounded-3xl border border-white/60 bg-white/50 p-8 backdrop-blur-xl md:p-12"
-        >
+        <div className="rounded-3xl border border-white/60 bg-white/50 p-8 backdrop-blur-xl md:p-12">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <span className="rounded-full bg-accent-soft px-4 py-1.5 text-sm font-medium text-accent">
               {project.period}
@@ -57,7 +53,7 @@ function ProjectCard({
               </li>
             ))}
           </ul>
-        </TiltCard>
+        </div>
       </motion.div>
     </div>
   );
